@@ -1,0 +1,31 @@
+{
+  "name": "ccfkv-test",
+  "version": "0.1.0",
+  "main": "dist/index",
+  "author": "Cale Teeter <cale.teeter@microsoft.com>",
+  "license": "MIT",
+  "type": "module",
+  "typings": "dist/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caleteeter/ccfkv-test"
+  },
+  "scripts": {
+    "build": "npm run compile",
+    "compile": "npm run clean && tsc -p ./",
+    "clean": "rm -rf dist",
+    "test": "mocha --experimental-specifier-resolution=node --loader=ts-node/esm tests/**/*.test.ts"
+  },
+  "dependencies": {
+    "@microsoft/ccf-app": "2.0.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.8.3",
+    "chai": "^4.3.6",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  }
+}
